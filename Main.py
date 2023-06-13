@@ -1,28 +1,42 @@
+"""
+The function provides a menu-driven program that allows the user to select different modes and
+functions related to complex numbers, statistics, equations, and more.
+"""
+
 import Compl
-import Cuadratica
+    
+import Eqn
 
-def Main():
-    print(" |=Setup=|=Mode=|\n", 
-           "|===1===|===2==|\n ")
-    
-    selection = input(" 1 or 2?: \n")
-    
-    if selection == "2": print("\n |=Complex=|=Stat=|=EQN=|=Table=|\n",
-                                  "|====1====|===2==|==3==|===4===|\n")
-        
-    selection2 = input(" ")
-    
-    if selection2 == "1": Compl.Calculator()
-       
-    elif selection2 == "2": print("esta funcion no esta programada aun")
-        
-    elif selection2 == "3":print("\n |-anX+bnY=cn-|-anX+bnY+cnZ=dn-|-ax2+bx+c=0-|-ax3+bx2+cx+d=0-|\n", 
-                                    "|------1-----|--------2-------|------3-----|--------4-------|\n")   
-           
-    selection_2_1 = input(" ")
-    if selection_2_1 == "1": print("esta funcion no esta programada aun")
-    elif selection_2_1 == "2": print("esta funcion no esta programada aun")
-    elif selection_2_1 == "3": Cuadratica.F_Cuadratica()
-    elif selection_2_1 == "4": print("esta funcion no esta programada aun")
+def setup():
+    pass
 
-Main()
+def mode():
+    print("\n |=1.Complex=|=2.Stat=|=3.EQN=|=4.Table=|\n")
+    user_input = input(" ")
+    if user_input == "1": Compl.Calculator()
+    elif user_input == "2": print("esta funcion no esta programada aun")
+    elif user_input == "3": Eqn.selection()
+    elif user_input == "4": print("esta funcion no esta programada aun")
+    
+def more_functions():
+    print(" |=1.Derivadas=|=2.Integrales=|=3.Suceciones=|=4.Polinomios=|=5.Sistemas de ecuaciones lineales=|\n",
+           "|=6.Conjuntos=|=7.Interes Compuesto=|=8.Ecuaciones Diferenciales=|=9.Sistemas no lineales=|=10.Matrices")
+    
+    print("Soon")
+
+def start():
+    print("|=1.setup=|=2.mode=|=3.more functions=|\n")
+    user_input = input(" ")
+    if user_input == "1": setup()
+    elif user_input == "2": mode()
+    elif user_input == "3": more_functions()
+    else: print("invalid input")
+
+def main():
+    start()
+main()
+
+
+    
+
+
