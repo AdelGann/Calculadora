@@ -7,7 +7,6 @@ from math import pi, e
 import numexpr
 
 
-
 def Calculator():
     while True:
         try:
