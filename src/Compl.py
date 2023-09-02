@@ -12,7 +12,6 @@ def Calculator():
         try:
             expression = input("Enter an expression to calculate: ")
             result = numexpr.evaluate(expression)
-        except ValueError:
             print(result.item(0))
         except ValueError:
             print("Invalid expression. Please try again.")

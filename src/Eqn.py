@@ -6,15 +6,16 @@ import math
 from sympy import * 
 import os
 
-def selection():
+def Main():
     print("\n |-1.anX+bnY=cn-|-2.anX+bnY+cnZ=dn-|-3.ax2+bx+c=0-|-4.ax3+bx2+cx+d=0-|-5.Lineal Eq-|\n")
-    user_input = input(" ")
-    if user_input == "1": print("esta funcion no esta programada aun")
-    elif user_input == "2": print("esta funcion no esta programada aun")
-    elif user_input == "3": F_Cuadratica()
-    elif user_input == "4": F_Cubica()
-    elif user_input == "5": F_Lineal_Eq()
-    else: ("invalid input") 
+    user_input = input(" ") 
+    match user_input:
+        case "1": "esta funcion no esta programada aun"
+        case "2": "esta funcion no esta programada aun"
+        case "3": F_Cuadratica()
+        case "4": F_Cubica()
+        case "5": F_Lineal_Eq()
+        case _: "invalid input"
     
 def F_Cuadratica():
     print("\n Ax2 + Bx + C = 0 \n", 
